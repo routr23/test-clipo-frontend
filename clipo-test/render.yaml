@@ -3,7 +3,7 @@ services:
     name: clipo-frontend
     runtime: node
     buildCommand: npm install && npm run build
-    startCommand: npx serve dist
+    startCommand: npx serve@latest -s dist -l 3000
     envVars:
       - key: NODE_ENV
         value: production
@@ -12,14 +12,5 @@ services:
       - key: VITE_GOOGLE_CLIENT_ID
         value: 602293352058-mv2k3nu25qs51hdsu9iah0hdfnmtrerg.apps.googleusercontent.com
 
-    staticPublishPath: dist
-    disk:
-      name: clipo_data
-      mountPath: /var/data
-      sizeGB: 1
-    
     autoDeploy: true
-
-    # Growth plan - adjust based on your traffic needs
     plan: starter
-    numInstances: 1
