@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /chat
+Disallow: /history
+
+Sitemap: https://clipo.ai/sitemap.xml
